@@ -25,10 +25,10 @@ public class ObjMercadoApplication {
 
 //		Recuperar todas las plazas (Para saber si se han guardado) READ
 		repositorio.findAll();
-
-
 //		Borrar plaza
 	    // repositorio.deleteById(1L); Borrar
+
+
 	}
 
 }

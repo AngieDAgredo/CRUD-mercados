@@ -10,6 +10,8 @@ import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 import java.util.Optional;
+import java.util.stream.Collector;
+import java.util.stream.Collectors;
 
 
 @RestController
@@ -18,7 +20,6 @@ public class PlazasControllers {
     private final Logger log = LoggerFactory.getLogger(PlazasControllers.class);
 
     private PlazaRepositorio repository;
-
     public PlazasControllers(PlazaRepositorio repository) {
         this.repository = repository;
     }
@@ -79,17 +80,23 @@ public class PlazasControllers {
             log.warn("Intentas borrar una plaza de mercado que no existe");
             return ResponseEntity.notFound().build();
         }
-        repository.deleteAllById(id);
+        repository.deleteAll();
         return ResponseEntity.noContent().build();
     }
 
 
-/*  FILTRO
-    @GetMapping ("/api/plazasmercado/{Ventafrutas}")
-    public List<plazas> filtro(@PathVariable Ventafrutas==true) {
-        return repository.findBy(Ventafrutas==true);
-    } */
+//    FILTRO
+        @GetMapping("/api/plazasmercado/Ventafrutas")
+        public List<plazas> filtro1() {
+        List<plazas> mercados = repository.findAll();
 
+        // Filtrar las plazas que venden frutas
+        List<plazas> plazasFrutas = mercados.stream()
+                .filter(plaza -> plaza.isVentafrutas())
+                .collect(Collectors.toList());
+
+        return plazasFrutas;
+    }
 
 
 

@@ -1,0 +1,145 @@
+{
+	"info": {
+		"_postman_id": "3ddfcf2a-da97-4e8e-ba96-50446cab8bd7",
+		"name": "OB Spring REST plazas",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "34483561"
+	},
+	"item": [
+		{
+			"name": "/api/plazasmercado",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\": 2,\r\n    \"nombre\": \"Galería Barrio Bolivar actualizado\",\r\n    \"direccion\": \"Calle 8 Nte 3 35\",\r\n    \"ventagranos\": false,\r\n    \"ventaVerduras\": false,\r\n    \"ventafrutas\": true\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/plazasmercado",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"plazasmercado"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/api/plazasmercado/create",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n        \"id\": null,\r\n        \"nombre\": \"Mercado ambulante Parque de la Salud\",\r\n        \"direccion\": \"Parque de la Salud\",\r\n        \"ventafrutas\": true,\r\n        \"ventagranos\": false,\r\n        \"ventaVerduras\": true\r\n    },",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/plazasmercado/create",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"plazasmercado",
+						"create"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/api/plazasmercado/2",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/plazasmercado/2",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"plazasmercado",
+						"2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/api/plazasmercado/update",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\": 2,\r\n    \"nombre\": \"Galería Barrio Bolivar actualizado\",\r\n    \"direccion\": \"Calle 8 Nte 3 35\",\r\n    \"ventagranos\": false,\r\n    \"ventaVerduras\": false,\r\n    \"ventafrutas\": true\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/plazasmercado/update",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"plazasmercado",
+						"update"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/api/plazasmercado/delete/",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/plazasmercado/delete/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"plazasmercado",
+						"delete",
+						""
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

@@ -1,4 +1,4 @@
-package com.codeinnova.objmercado;
+package com.codeinnova.objmercado.entities;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
@@ -85,3 +85,4 @@ public class plazas {
     }
 
 }
+

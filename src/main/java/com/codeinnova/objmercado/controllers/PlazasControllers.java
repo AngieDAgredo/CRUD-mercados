@@ -8,6 +8,7 @@ import org.slf4j.LoggerFactory;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
 import java.util.stream.Collector;
@@ -86,16 +87,27 @@ public class PlazasControllers {
 
 
 //    FILTRO
-        @GetMapping("/api/plazasmercado/Ventafrutas")
+        @GetMapping("/api/plazasmercado/Ventafrutas") //Curl dirección
         public List<plazas> filtro1() {
-        List<plazas> mercados = repository.findAll();
 
-        // Filtrar las plazas que venden frutas
+            List<plazas> mercados = repository.findAll(); // Defino lista que va a traer todo lo del repositorio
+            List<plazas> marketfruits = new ArrayList<>();
+
+            for (plazas mercado : mercados) {
+                if(mercado.isVentafrutas()){
+                    marketfruits.add(mercado);
+                }
+            }
+            return marketfruits;
+
+
+      /*  // Filtrar las plazas que venden frutas
         List<plazas> plazasFrutas = mercados.stream()
                 .filter(plaza -> plaza.isVentafrutas())
                 .collect(Collectors.toList());
 
-        return plazasFrutas;
+        return plazasFrutas; */
+
     }
 
 

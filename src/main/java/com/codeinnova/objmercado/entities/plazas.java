@@ -8,14 +8,15 @@ import jakarta.persistence.Id;
 
 
 @Entity
-public class plazas {
+//no estas guardando tu objeto en base de datos te falta el @Table()
+public class plazas {//Los nombres de las entidades comienzan en MAYISCULA
 //    Atributos
     @Id
     @GeneratedValue(strategy= GenerationType.IDENTITY)
     private Long id;
     private String nombre;
     private String direccion;
-    private boolean Ventafrutas;
+    private boolean Ventafrutas;//los nombres de los atributos comienzan en minusculas
     private boolean Ventagranos;
     private boolean VentaVerduras;
 
@@ -36,6 +37,9 @@ public class plazas {
 
     //    Getter y Setter
 
+    //aqui luego vamos a comenzar a validar cositas
+    //imagina que cuando hagamos codigo mas robusto no vamos a permitir hacer un set de una variable incorrecta
+    //asi por ejemplo a tu variable name no la vamos a permitir poner numeros ya que sabemos qu eno hay nombres con numeros
     public Long getId() {
         return id;
     }
@@ -83,6 +87,8 @@ public class plazas {
     public void setVentaVerduras(boolean ventaVerduras) {
         VentaVerduras = ventaVerduras;
     }
+
+    //Fatla el metodo toString
 
 }
 

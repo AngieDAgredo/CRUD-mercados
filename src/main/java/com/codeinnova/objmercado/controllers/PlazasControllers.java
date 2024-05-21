@@ -109,10 +109,8 @@ public class PlazasControllers {
         return plazasFrutas; */
 
     }
-
-
-
-
-
-
 }
+
+
+//muy buen trabajo Angieeeee, vas muy bien, mi consejo es inicialmente haz codigo simple y funcional, se clara con los nombres
+//y descriptores y sigue juiciosa aprendiendo cada dia a hacer un codigo limpio

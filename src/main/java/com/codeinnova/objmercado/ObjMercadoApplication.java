@@ -26,7 +26,7 @@ public class ObjMercadoApplication {
 		LocalTime closing = LocalTime.of(18,0);
 
 		Markets.OperatingHours operatingHours1 = new Markets.OperatingHours(null,null,opening,closing,opening,closing,opening,closing,opening,closing,opening,closing,null,null);
-		Markets.Products products1 = new Markets.Products(false,false,true,false,false,false,true,false,true,false,false,false,true,false,true,false,false,false,true,false,true,false,false,false,true,false,true,false,false,false,true,false,true,false,false,false,true,false,true,false,false,false,true,false,true,false,false,false,true,false,true,false,false,false,true,false,true,false,false,false,true,false,true,false,false,false,true,false,true,false,false,false,true,false,true,false,false,false,true,false,true,false,false,false,true,false,true,false,false,false,true,false,true,false,false,false,true,true,false,false,true,true);
+		Markets.Products products1 = new Markets.Products(true,true,true,false,false,false,true,false,true,false,false,false,true,false,true,false,false,false,true,false,true,false,false,false,true,false,true,false,false,false,true,false,true,false,false,false,true,false,true,false,false,false,true,false,true,false,false,false,true,false,true,false,false,false,true,false,true,false,false,false,true,false,true,false,false,false,true,false,true,false,false,false,true,false,true,false,false,false,true,false,true,false,false,false,true,false,true,false,false,false,true,false,true,false,false,false,true,true,false,false,true,true);
 		Markets.Qualification qualification1 = new Markets.Qualification(4.3f,"Buen servicio");
 		Markets.Contact contact1 = new Markets.Contact("market1@gmail.com",3232210312L);
 

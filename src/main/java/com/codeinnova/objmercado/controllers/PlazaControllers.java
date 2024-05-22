@@ -63,15 +63,16 @@ public class PlazaControllers {
         repository.deleteById(id);
         return ResponseEntity.noContent().build();
     }
-    @GetMapping("/api/plazasmercado/manzanas")
+    @GetMapping("/api/plazasmercado/manzanas/bananos")
     public List<Markets> filter1() {
         List<Markets> shop = repository.findAll();
         List<Markets> marketfruits = new ArrayList<>();
 
         for (Markets market : shop) {
-            if (market.getProducts().isManzanas()) {
+            if (market.getProducts().isManzanas() && market.getProducts().isBananos()) {
                 marketfruits.add(market);
             }
+
         }
         return marketfruits;
     }
